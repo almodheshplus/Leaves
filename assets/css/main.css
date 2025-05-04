@@ -1,0 +1,211 @@
+/* 
+    # Coded With 🧡 By Youssef Almodhesh
+*/
+
+:root {
+    --primary-font: "Heebo", sans-serif;
+    --secondary-font: "Comic Relief", system-ui;
+    --contrast-color: #fff;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--contrast-color);
+    background-color: #222;
+}
+
+.sign-in {
+    padding: 10px 40px;
+    letter-spacing: 1.2px;
+}
+.btn-primary {
+    background-color: #1ab641;
+    box-shadow: inset 0 0 20px 0 #00000054;
+    border: 0;
+}
+.btn-primary:hover {
+    background-color: #209c3f;
+    border: 0;
+}
+.section-title {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    position: relative;
+    padding-left: 10px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #209c3f;
+    border-radius: 50px;
+
+}
+.section-paragraph {
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+header .navbar {
+    height: 76px;
+    background-image: linear-gradient(to bottom right, #252020, #333333);
+}
+.navbar .navbar-brand img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.hero {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 76px);
+    color: var(--contrast-color);
+}
+.hero .overlay {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+    width: 100%;
+    height: 100%;
+}
+.hero .container, .hero .row {
+    height: 100%;
+}
+.hero h1 {
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    line-height: 65px;
+}
+.hero p {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+}
+.hero input {
+    padding: 15px;
+    font-size: 15px;
+}
+.goto-main {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: fit-content;
+    font-size: 35px;
+    color: #fff;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transition: font-size 0.2s;
+}
+.goto-main:hover {
+    animation-play-state: paused;
+    font-size: 40px;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0);}
+    40% {transform: translate(-50%, -25px);}
+    60% {transform: translate(-50%, -5px);}
+}
+
+.main {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main .overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.main .accordion-item {
+    border-radius: 0;
+    margin-bottom: 10px;
+    background-color: #333333;
+    color: var(--contrast-color);
+    border: 0;
+}
+.main .accordion-item .accordion-button::after {
+    background: unset;
+    content: "\f4fe";
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-size: 20px;
+}
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(45deg);
+}
+.main .accordion-button {
+    background-color: #333333;
+    color: var(--contrast-color);
+}
+.accordion#faq {
+    margin-top: 40px;
+}
+
+footer {
+    background-image: linear-gradient(to bottom right, #141010, #333333);
+}
+footer .list-group .list-group-item {
+    background-color: transparent;
+    border: 0;
+}
+footer .list-group .list-group-item a {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+footer .list-group .list-group-item a:hover {
+    color: #bbbbbb;
+    text-decoration: underline;
+}
+footer .copyright-footer {
+    border-top: 2px solid rgb(163, 163, 163);
+    color: #73bd2d;
+    font-family: var(--secondary-font);
+}
+
+.signin {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.signin h2 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+.signin .form {
+    padding: 30px 50px;
+    background-color: #333;
+    border-radius: 15px;
+}
+.signin .form .form-label {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+.signin .form .form-control {
+    background-color: #4e4e4e;
+    color: #ddd;
+    border: 0;
+}
+.signin .form .btn-primary-custom {
+    margin-top: 20px;
+    background-color: #1ab641;
+    color: #ddd;
+    border: 0;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+}
